@@ -3,7 +3,7 @@
     target="_blank"
     v-bind:href="site"
     @click="nextSite()"
-    class="click-enable bg-google-gray-light border border-google-gray-light rounded text-gray-800 px-4 py-2 hover:border-gray-400 hover:shadow-md ml-2"
+    class="click-enable bg-background-secondary border border-background-secondary rounded text-text-secondary px-4 py-2 hover:border-text-secondary hover:shadow-md ml-2"
   >
     I'm Feeling Lucky
   </a>

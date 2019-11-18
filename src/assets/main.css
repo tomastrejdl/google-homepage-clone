@@ -12,3 +12,28 @@ input:focus {
 .click-through {
   pointer-events: none;
 }
+
+.theme-light {
+  --background-primary: white;
+  --background-secondary: #f2f2f2;
+
+  --text-primary: black;
+  --text-secondary: rgb(49, 49, 49);
+
+  --box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+}
+
+.theme-dark {
+  --background-primary: black;
+  --background-secondary: rgb(49, 49, 49);
+
+  --text-primary: white;
+  --text-secondary: #f2f2f2;
+
+  --box-shadow: 0 1px 6px 0 rgba(223, 222, 219, 0.72);
+}
+
+.transitin-container,
+.transitin-container * {
+  transition: background-color 1s;
+}

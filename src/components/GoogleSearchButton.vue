@@ -1,7 +1,7 @@
 <template>
   <a
     v-bind:href="queryUrl"
-    class="click-enable bg-google-gray-light border border-google-gray-light rounded text-gray-800 px-4 py-2 hover:border-gray-400 hover:shadow-md mr-2"
+    class="click-enable bg-background-secondary border border-background-primary rounded text-text-secondary px-4 py-2 hover:border-text-secondary hover:shadow-md mr-2"
   >
     Google Search
   </a>
@@ -18,7 +18,9 @@ export default {
   },
   computed: {
     queryUrl: function() {
-      return `https://google.com/search?q=${this.query.replace(/ +/g, '+')}`;
+      return this.query.trim().length > 0
+        ? `https://google.com/search?q=${this.query.replace(/ +/g, '+')}`
+        : '#';
     },
   },
 };
