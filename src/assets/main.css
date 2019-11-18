@@ -1,0 +1,14 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+button:focus,
+input:focus {
+  @apply outline-none;
+}
+
+.click-through {
+  pointer-events: none;
+}
