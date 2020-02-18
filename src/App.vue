@@ -10,18 +10,23 @@
 </template>
 
 <script>
+// import store from '@/store/store';
+import { mapState, mapActions } from 'vuex';
+
 export default {
   name: 'app',
-  data: () => ({
-    theme: 'theme-light',
-  }),
+  computed: {
+    ...mapState(['theme']),
+  },
   created() {
-    this.theme = localStorage.getItem('theme') || 'theme-light';
+    this.setTheme(localStorage.getItem('theme') || 'theme-light');
   },
   methods: {
+    ...mapActions(['setTheme']),
     toggleTheme() {
-      this.theme = this.theme === 'theme-light' ? 'theme-dark' : 'theme-light';
-      localStorage.setItem('theme', this.theme);
+      const theme = this.theme === 'theme-light' ? 'theme-dark' : 'theme-light';
+      localStorage.setItem('theme', theme);
+      this.setTheme(theme);
     },
   },
 };

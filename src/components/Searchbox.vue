@@ -101,7 +101,6 @@ export default {
   },
   mounted() {
     document.myCustomCallback = res => {
-      console.log(res);
       this.searchResults = res[1].map((result, i) => ({
         id: i,
         text: result[0],
